@@ -654,6 +654,7 @@ namespace Tensile
     KernelInvocation ContractionSolution::generateOutputConversionCall(
         Problem const& problem, TypedInputs const& inputs, Hardware const& hardware) const
     {
+	TensorDescriptor const& c = problem.c();
         TensorDescriptor const& d = problem.d();
 
         KernelInvocation rv;
